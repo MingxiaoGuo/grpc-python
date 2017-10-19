@@ -20,3 +20,5 @@
         print("Encode:\n", request)
         return encoder_pb2.EncodeResponse(id=newId)
   ```
+3. client.py
+  coding...
