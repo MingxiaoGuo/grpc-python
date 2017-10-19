@@ -3,6 +3,7 @@
 * use `python3` command always
 * open two `power shell`, one type `python3 server.py`, 当第一个shell打印出`init Server started at...3000`，在另外的shell里输入`python3 client.py`
 * 如果server端报错，ctrl+c停止服务，调试成功再运行
+### 如果有问题，在Issue里发一个issue我就能看见了
 
 1. server.py
   ```
