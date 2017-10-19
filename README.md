@@ -21,4 +21,19 @@
         return encoder_pb2.EncodeResponse(id=newId)
   ```
 3. client.py
-  coding...
+  ```
+      def decode(self, request, context):
+        '''
+        :return: encoder_pb2.DecodeResponse
+        '''
+        map = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        result = ""
+        count = request.id
+        while (count > 0): 
+            result += map[int(count%62)]
+            count = int(count / 62)
+
+        result = result[::-1] # reverse string
+        print("Decode:\n", request)
+        return encoder_pb2.DecodeResponse(url=result)
+  ```
