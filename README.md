@@ -1,7 +1,10 @@
 # grpc-python
 
-1. use `python3` command always
-2. server.py
+* use `python3` command always
+* open two `power shell`, one type `python3 server.py`, 当第一个shell打印出`init Server started at...3000`，在另外的shell里输入`python3 client.py`
+* 如果server端报错，ctrl+c停止服务，调试成功再运行
+
+1. server.py
   ```
       def encode(self, request, context):
         '''
@@ -20,7 +23,7 @@
         print("Encode:\n", request)
         return encoder_pb2.EncodeResponse(id=newId)
   ```
-3. client.py
+2. client.py
   ```
       def decode(self, request, context):
         '''
